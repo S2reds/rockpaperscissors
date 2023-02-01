@@ -15,3 +15,18 @@ let playRound = (player, comp) => {
     else return 'Tie Game';
 }
 
+function game() {
+    let userScore = 0;
+    let compScore = 0;
+    for (let i = 0; i < 5; i++) {
+        let userGuess = prompt("Rock, paper, or scissors?")
+        let compGuess = getComputerChoice();
+        let game = playRound(userGuess, compGuess);
+        let split = game.split(",")
+        if (split[0] === "You Win") ++userScore
+        else if (split[0] === "You Lose") ++compScore 
+        console.log(`Score is Player: ${userScore} and Comp: ${compScore}`)
+    }
+}
+
+game()
