@@ -17,9 +17,33 @@ html, body {
     align-items: center;
     gap: 50px;
     height: 100%;
+    font-family:"Lucida Console", "Courier New", monospace;
 }
 
 #results {
     display: flex;
     flex-direction: column;
+}
+
+.button {
+    width: 100px;
+    flex: auto;
+    border-radius: 20px;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.button:hover, .restart:hover {
+    transform: scale(1.2);
+}
+
+.restart {
+    width: 300px;
+    flex: auto;
+    border-radius: 20px;
+    transition-duration: .3s;
+    font-size: 15px;
+    font-weight: bolder;
 }

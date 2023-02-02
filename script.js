@@ -37,10 +37,15 @@ btns.forEach(btn => {
         let compGuess = getComputerChoice()
         let game = playRound(eTarget, compGuess)
         let split = game.split(",")
-        if (split[0] === "You Win") userScore++
-        else if (split[0] === "You Lose") compScore++ 
-        round.textContent = `${game}`
-        updateScore.textContent = `Your Score is: ${userScore} and Comp: ${compScore}`
+        if (split[0] === "You Win") {
+            userScore++
+            round.innerHTML = `<span style='color:green'>${game}</span>`
+        } else if (split[0] === "You Lose") {
+            compScore++ 
+            round.innerHTML = `<span style='color:red'>${game}</span>`
+           }
+            
+        updateScore.innerHTML = `Your Score is: ${userScore} <br> Comp Score is: ${compScore}`
         if (userScore === 5) {
             btns.forEach(b => b.removeEventListener)
             results.textContent = 'You win!'
@@ -57,10 +62,10 @@ btns.forEach(btn => {
 
 
 function game() {
+    replay1.style.visibility = 'hidden'
     userScore = 0;
     compScore = 0;
     updateScore.textContent = ''
-    replay1.style.visibility = 'hidden'
     round.textContent = ''
     results.textContent = ''
     btns.forEach(b => b.disabled = false)
