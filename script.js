@@ -43,7 +43,7 @@ btns.forEach(btn => {
         } else if (split[0] === "You Lose") {
             compScore++ 
             round.innerHTML = `<span style='color:red'>${game}</span>`
-           }
+           } else round.innerHTML = `<span style='color:black'>${game}</span>`
             
         updateScore.innerHTML = `Your Score is: ${userScore} <br> Comp Score is: ${compScore}`
         if (userScore === 5) {
