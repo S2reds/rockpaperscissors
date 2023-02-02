@@ -1,0 +1,25 @@
+.container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.container button {
+    height: 50px;   
+}
+
+
+html, body {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 50px;
+    height: 100%;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+}
